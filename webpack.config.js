@@ -96,6 +96,7 @@ if (isDev) {
     })
     config.plugins.push(
             new ExtractPlugin('styles.[contentHash:8].css'),
+            //vendor一定要在runtime前面
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'vendor'
             }),
